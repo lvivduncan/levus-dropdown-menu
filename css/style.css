@@ -1,4 +1,3 @@
-
 *{
     padding: 0;
     margin: 0;
@@ -37,10 +36,11 @@ body{
     .levus-menu ul li{
         display: block;
         position: relative;
+        outline: 1px solid var(--gray);
     }
         .levus-menu ul li a{
             display: block;
-            padding: 10px;
+            padding: 12px 10px;
             color: var(--black);
             background: var(--blue);
             text-decoration: none;
@@ -50,6 +50,35 @@ body{
             background: var(--red);
             color: var(--gray);
         }
+
+/* елемент з випадаючими блоками меню */
+        .levus-menu li.parent{
+            overflow: hidden;
+        }
+            .levus-menu li.parent > span{
+                width: 44px;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+            }
+/* хрестик */
+            .levus-menu li.parent > span::after{
+                content: '+';
+                width: 44px;
+                height: 42px;
+                line-height: 42px;
+                color: var(--black);
+            }
+            .levus-menu li.parent a{
+                padding-right: 38px;
+            }
+            .levus-menu li.parent:hover::after{
+                color: var(--gray);
+            }
 
 /* dropdown */
     .levus-menu ul li > ul{
@@ -69,6 +98,58 @@ body{
         }
 
 /* mobile */
+.levus-menu-mobile{
+    height: 38px;
+    position: relative;
+    cursor: pointer;
+}
+/* емуляція іконки меню */
+    .levus-menu-mobile::after{
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAOElEQVRIie3TsQkAMAwDwSf7b+XBnCqQ1hC7yR+oFioEkhoEkM2JU7YGBt1yuE+/807SM95JUskGsVVPTkFzAfwAAAAASUVORK5CYII=');
+    }
 
+    .levus-menu-mobile ul{
+        display: none;
+    }
+/* перший рівень */
+    .levus-menu-mobile ul.block{
+        display: block;
+        position: relative;
+        top: 38px;
+        width: 100%;
+    }
+    .levus-menu-mobile li.parent > ul{
+        display: none;
+    }
 
-/**/
+/* вкладені рівні */
+    .levus-menu-mobile ul.open{
+        display: block!important;
+        position: relative!important;
+    }
+/* мобільний лінк має бути на всю ширину */
+    .levus-menu-mobile ul li a{
+        width: 100%;
+    }
+/* відступи у вкладених пунктів */
+        .levus-menu-mobile ul li li a{
+            padding-left: 20px;
+        }
+            .levus-menu-mobile ul li li li a{
+                padding-left: 40px;
+            }
+                .levus-menu-mobile ul li li li li a{
+                    padding-left: 60px;
+                }
+
+/* відміняємо 100% відступ на мобілках */
+            .levus-menu-mobile ul li li:hover ul{
+                position: relative!important;
+                right: 0;
+            }
