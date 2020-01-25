@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -30,7 +31,7 @@ body{
     background: var(--gray);
 }
 
-.levus-menu ul{
+.levus-menu > ul{
     display: flex;
 }
     .levus-menu ul li{
@@ -53,7 +54,7 @@ body{
 
 /* елемент з випадаючими блоками меню */
         .levus-menu li.parent{
-            overflow: hidden;
+            /* overflow: hidden; */
         }
             .levus-menu li.parent > span{
                 width: 44px;
@@ -124,12 +125,16 @@ body{
         top: 38px;
         width: 100%;
     }
-    .levus-menu-mobile li.parent > ul{
-        display: none;
+    .levus-menu-mobile li.parent{
+        overflow: hidden;
     }
+/* вкладений блок до того моменту, коли клікають на хрестик у батьківському */
+        .levus-menu-mobile li.parent > ul{
+            display: none!important;
+        }
 
 /* вкладені рівні */
-    .levus-menu-mobile ul.open{
+    .levus-menu-mobile li.parent > ul.open{
         display: block!important;
         position: relative!important;
     }
@@ -153,3 +158,6 @@ body{
                 position: relative!important;
                 right: 0;
             }
+
+
+/**/
