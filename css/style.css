@@ -1,0 +1,74 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #71D1E5;
+    --red: #FA5C1A;
+    --gray: #DEEDED;
+    --black: #000;
+}
+
+body{
+    padding: 50px 0;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+@media(max-width: 1250px){
+    .container{
+        width: 95%;
+    }
+}
+
+#nav{
+    margin: 0 0 50px;
+    background: var(--gray);
+}
+
+.levus-menu ul{
+    display: flex;
+}
+    .levus-menu ul li{
+        display: block;
+        position: relative;
+    }
+        .levus-menu ul li a{
+            display: block;
+            padding: 10px;
+            color: var(--black);
+            background: var(--blue);
+            text-decoration: none;
+            width: 170px;
+        }
+        .levus-menu ul li a:hover{
+            background: var(--red);
+            color: var(--gray);
+        }
+
+/* dropdown */
+    .levus-menu ul li > ul{
+        display: none;
+    }
+    .levus-menu ul li:hover > ul{
+        display: block;
+        position: absolute;
+    }
+        .levus-menu ul li li ul{
+            display: none;
+        }    
+        .levus-menu ul li li:hover ul{
+            position: absolute;
+            right: -100%;
+            top: 0;
+        }
+
+/* mobile */
+
+
+/**/
