@@ -25,9 +25,16 @@ const echo = console.log;
 
     // розкриваємо блоки у підпунктів
     levusMenu.addEventListener('click', e => {
-        if (e.target.tagName == 'SPAN') {
+        if (e.target.tagName == 'SPAN') {            
             // 2 елемент (ul)
             e.target.parentNode.children[1].classList.toggle('open');
+            // сусідні елементи ul мають автоматично закриватися
+            // TODO
+
+            for (let index = 0; index < e.target.parentNode.children.length; index++) {
+                echo(index);
+                echo(e.target.parentNode.parentNode.children[index]);
+            }
         }
     });
 
