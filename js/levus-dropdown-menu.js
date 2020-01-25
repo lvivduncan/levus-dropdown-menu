@@ -31,10 +31,6 @@ const echo = console.log;
             // сусідні елементи ul мають автоматично закриватися
             // TODO
 
-            for (let index = 0; index < e.target.parentNode.children.length; index++) {
-                echo(index);
-                echo(e.target.parentNode.parentNode.children[index]);
-            }
         }
     });
 
