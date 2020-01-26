@@ -49,7 +49,7 @@ body{
         }
         .levus-menu ul li a:hover{
             background: var(--red);
-            color: var(--gray);
+            color: var(--gray);  
         }
 
 /* елемент з випадаючими блоками меню */
@@ -84,6 +84,7 @@ body{
 /* dropdown */
     .levus-menu ul li > ul{
         display: none;
+        animation: animation 1s; 
     }
     .levus-menu ul li:hover > ul{
         display: block;
@@ -159,5 +160,26 @@ body{
                 right: 0;
             }
 
-
-/**/
+/* емуляція плавності */
+@-webkit-keyframes animation{
+    0%{
+        transform:translateX(0);
+    }
+    50%{
+        transform:translateX(30px);
+    }
+    100%{
+        transform:translateX(0);
+    }	
+}
+@keyframes animation{
+    0%{
+        transform:translateX(0);
+    }
+    50%{
+        transform:translateX(30px);
+    }
+    100%{
+        transform:translateX(0);
+    }	
+}
