@@ -1,6 +1,3 @@
-// debug
-const echo = console.log;
-
 {
     window.addEventListener('resize', toggleMobileMenu);
 
@@ -27,10 +24,9 @@ const echo = console.log;
     levusMenu.addEventListener('click', e => {
         if (e.target.tagName == 'SPAN') {            
             // 2 елемент (ul)
-            e.target.parentNode.children[1].classList.toggle('open');
-            // сусідні елементи ul мають автоматично закриватися
-            // TODO
-
+            e.target.parentElement.children[1].classList.toggle('open');
+            // TODO: сусідні елементи ul мають автоматично закриватися
+            // 
         }
     });
 
