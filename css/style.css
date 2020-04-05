@@ -106,21 +106,39 @@ body{
         display: none;
         animation: animation 1s; 
         background: white;
+        border: 1px solid var(--blue);
+        border-top: none;
     }
 
     .levus-menu ul li:hover > div{
         display: flex;
+        /* justify-content: center; */
         position: absolute;   
     }
 
     .levus-menu div ul{
-        width: auto;
+        width: 100%;
+        padding: 10px 0;
     }
+        .levus-menu div ul li{
+            border: none;
+            outline: none;
+        }
+            .levus-menu div ul li a{
+                width: 100%;
+                background: none;
+                padding: 6px 10px;
+            }
+            .levus-menu div ul li a:hover{
+                background: none;
+                color: var(--red);
+            }
 
-
-
-
-
+@media(max-width: 1250px){
+    .full-width{
+        display: none!important;
+    }
+}
 
 
 

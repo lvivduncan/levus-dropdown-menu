@@ -25,8 +25,6 @@
         if (e.target.tagName == 'SPAN') {            
             // 2 елемент (ul)
             e.target.parentElement.children[1].classList.toggle('open');
-            // TODO: сусідні елементи ul мають автоматично закриватися
-            // 
         }
     });
 
