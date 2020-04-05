@@ -99,6 +99,32 @@ body{
             top: 0;
         }
 
+/* full-widht block */
+    .levus-menu ul li > div{
+        /* width: 100%; */
+        width: 1200px;
+        display: none;
+        animation: animation 1s; 
+        background: white;
+    }
+
+    .levus-menu ul li:hover > div{
+        display: flex;
+        position: absolute;   
+    }
+
+    .levus-menu div ul{
+        width: auto;
+    }
+
+
+
+
+
+
+
+
+
 /* mobile */
 .levus-menu-mobile{
     height: 38px;
